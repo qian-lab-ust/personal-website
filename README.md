@@ -6,15 +6,15 @@
 
 ## 修改内容
 
-打开 `profile.js` 修改名字、介绍、兴趣、GitHub 用户名、邮箱和作品。保存并提交到 GitHub 后，Pages 会重新发布。当前介绍和作品是示例与占位内容；请在发布前替换。联系方式留空时不会产生无效链接。
+打开 `profile.js` 修改名字、介绍、兴趣、GitHub 用户名、邮箱和作品。保存并提交到 GitHub 后，Pages 会重新发布。当前介绍和作品是示例与占位内容；可在后续编辑时替换。联系方式留空时不会产生无效链接。
 
 ## 在 GitHub Pages 发布
 
-1. 在自己的 GitHub 账号下创建公开仓库，名称为 `qian-lab-ust.github.io`。如果该仓库已存在，先检查现有内容，不要直接覆盖。
+1. 使用现有仓库 `https://github.com/qian-lab-ust/personal-website`，保留现有提交历史。
 2. 把本文件夹内的文件上传至仓库根目录，确保 `index.html` 位于根目录。
 3. 打开仓库 **Settings → Pages → Build and deployment**。
 4. Source 选择 **Deploy from a branch**，Branch 选择 **main**，目录选择 **/ (root)**，点击 **Save**。
-5. 等待 GitHub 部署成功，访问 `https://qian-lab-ust.github.io/`。
+5. 等待 GitHub 部署成功，访问 `https://qian-lab-ust.github.io/personal-website/`。
 
 这套纯静态页面直接使用根目录发布，不需要额外的 GitHub Actions 工作流。GitHub Free 支持公开仓库的 Pages 网站。公开仓库里的文件和主页内容均对外可见，请仅填写准备公开的信息。
 
