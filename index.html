@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="我的个人主页，记录作品、想法与生活。">
+  <meta name="theme-color" content="#000000">
+  <title>我的个人主页</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="profile.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#home" aria-label="回到首页"><span data-name>Mr.Q</span></a>
+      <nav aria-label="主导航"><a href="#about">关于</a><a href="#work">作品</a><a href="#contact">联系 <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <svg class="hero-mark" viewBox="0 0 160 160" fill="none" aria-hidden="true">
+          <circle cx="72" cy="72" r="45" stroke="currentColor" stroke-width="16"/>
+          <path d="M97 97L132 132" stroke="currentColor" stroke-width="16" stroke-linecap="round"/>
+        </svg>
+        <div class="hero-copy">
+          <p class="eyebrow">PERSONAL SPACE</p>
+          <h1 id="hero-title">Welcome,<br><span class="english-title">Here is <span data-name>Mr.Q</span><span class="title-dot">.</span></span></h1>
+          <p class="intro" id="tagline">记录热爱，保持好奇。<br>在这里，分享我的作品、想法和生活。</p>
+          <a class="button" href="#work">逛逛我的主页 <span aria-hidden="true">↗</span></a>
+          
+        </div>
+      </section>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="section-label"><h2 id="about-title">关于我</h2></div>
+        <div class="about-copy"><p id="about-text">这里是我的个人空间，用来收藏值得记录的事，也让你更了解我一点。这个小小的主页，会随着我的经历慢慢生长。</p><div class="tags" id="interests"><span>创作</span><span>探索</span><span>生活</span></div><p class="placeholder-note" id="demo-note">主页初稿 · 介绍与作品内容待你填写</p></div>
+      </section>
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="section-heading"><div class="section-label"><h2 id="work-title">作品与记录</h2></div><p>作品与记录，陆续更新。</p></div>
+        <div class="projects" id="projects">
+          <article class="project"><div class="project-meta">01</div><div class="project-copy"><h3>我的第一个作品</h3><p>留给下一个想分享的创作。</p></div><span class="sample-label">待添加</span></article>
+          <article class="project"><div class="project-meta">02</div><div class="project-copy"><h3>生活里的小发现</h3><p>一些照片、经历与灵感。</p></div><span class="sample-label">待添加</span></article>
+        </div>
+      </section>
+      <section class="contact section" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">联系</p><h2 id="contact-title">Say hello.</h2><p id="contact-description">有想交流的想法，欢迎打个招呼。</p></div><div class="contact-links" id="contact-links"><span class="contact-pending">联系方式待添加 <span aria-hidden="true">↗</span></span></div></section>
+    </main>
+    <footer><span>© <span id="year"></span> <span data-name>Mr.Q</span></span><a href="#home">回到顶部 ↑</a></footer>
+  </div>
+</body>
+</html>
