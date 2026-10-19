@@ -4,3 +4,7 @@
 *.pem
 *.key
 node_modules/
+_site/
+_site.build/
+.playwright/
+*.log

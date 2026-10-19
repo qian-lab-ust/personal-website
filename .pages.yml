@@ -1,0 +1,93 @@
+# Pages CMS 官方托管后台；这里没有密码、密钥或 GitHub 写入令牌。
+media:
+  - name: images
+    label: 文章图片
+    input: media
+    output: /personal-website/media
+    extensions: [jpg, jpeg, png, webp, gif, avif]
+    rename: random
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{fields.id}.md"
+      field: false
+    operations:
+      create: true
+      delete: true
+      rename: false
+    view:
+      fields: [title, status, date]
+      primary: title
+      sort: [date, title, status]
+      search: [title, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: id
+        type: uuid
+        required: true
+        hidden: true
+        options:
+          editable: false
+          generate: false
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: status
+        label: 发布状态
+        type: select
+        required: true
+        default: draft
+        description: "草稿：保存但不出现在 Blog。已发布：保存后自动更新网站，通常几分钟。当前 GitHub 仓库公开，草稿源文件也可被查看。"
+        options:
+          values:
+            - name: draft
+              label: 草稿
+            - name: published
+              label: 已发布
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: excerpt
+        label: 摘要
+        type: text
+        description: 可选，用于文章列表。
+      - name: cover
+        label: 封面图片
+        type: image
+        options:
+          media: images
+        description: 可选，建议使用 JPG、PNG 或 WebP。单张图片请小于 10 MB。
+      - name: coverAlt
+        label: 封面图片说明
+        type: string
+      - name: body
+        label: 正文
+        type: rich-text
+        description: 支持可视化编辑和 Markdown，可直接插入或上传图片。发布前请填写正文。
+        options:
+          format: markdown
+          media: images
+          extensions: [jpg, jpeg, png, webp, gif, avif]
+          rename: random
+          switcher: true
+settings:
+  hide: true
+  content:
+    merge: true
+  commit:
+    identity: app
